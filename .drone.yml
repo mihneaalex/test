@@ -1,9 +1,6 @@
 pipeline:
   build:
-when:
-  event: push
-  branch: develop
-image: node:carbon-alpine
-commands:
-  - npm install
-  - npm test
+    image: golang
+    commands:
+      - go build
+      - go test
