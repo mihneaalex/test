@@ -1,3 +1,4 @@
+pipeline:
 steps:
   - name: hello
     image: alpine
