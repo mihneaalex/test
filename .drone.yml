@@ -1,6 +1,9 @@
 pipeline:
-steps:
-  - name: hello
-    image: alpine
-    commands:
-      - echo Hello World!
+  build:
+when:
+  event: push
+  branch: develop
+image: node:carbon-alpine
+commands:
+  - npm install
+  - npm test
